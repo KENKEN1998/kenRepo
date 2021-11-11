@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>JavaScript1回目</title>
+    <link rel="shortcut icon" href="../../_common/images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=M+PLUS+1p:400,500" rel="stylesheet">
+    <link href="../../_common/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>JavaScriptをまずは触る！</h1>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <section>
+
+                <!-------------------------------------->
+                <h4>＜第一回目＞</h4>　
+                <h4>【やる事】</h4>
+                <h4>①JavaScriptの超基本</h4>
+                <h5>
+                    ここに分かったをメモっていこう
+                </h5>
+                <h4>②メソッドについて</h4>
+                <h5>
+                    ここに分かったをメモっていこう
+                </h5>
+                <h4>③DOMをつかむ</h4>
+                <h5>
+                    ここに分かったをメモっていこう
+                </h5>
+                <!-------------------------------------->
+                <hr>
+
+
+                <!-------------授業ではこの部分を触れるよ。------------>
+                <h4>＜ここを触る＞</h4>
+                <button onclick='lesson01()' id="push">あなたの本音、引き出します。</button>
+
+                <p id="mojimoji">モジモジ・・・</p>
+                <button onclick='lesson02()' id="push">あなたのモジモジ、なおします。</button>
+                <!--
+                    <img id="img1" src="./img/cat.jpg">
+                -->
+                <br><br>
+                <div onclick='paractice02()' id="img1">
+                    <img src="./img/cat.jpg" width="190px">
+                </div>
+
+                <hr>
+                <!----------------------------------------------->
+
+
+                <!-----------  ここから練習問題ブロック------------>
+                <h5>練習問題1</h5>
+                <button onclick='paractice01()' id="push">練習問題です。</button>
+                
+
+                <hr>
+                <!----------------------------------------------->
+
+
+                <div>
+                    
+                    <input type="text" placeholder="Enter Username" name="uname" required>
+                    <br>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+                    <br>
+                    <button onclick='paractice03()' type="submit">Login</button>
+
+
+                <!----------------------------------------------->
+            </section>
+        </div><!-- /.container -->
+    </main>
+    <script src="../../_common/scripts/jquery-3.4.1.min.js"></script>
+    <script src="script.js"></script>
+    <script src="paractice.js"></script>
+</body>
+
+</html>
