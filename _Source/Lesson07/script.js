@@ -1,39 +1,32 @@
-/*
-ゲームステータス要素をここに保存します
-*/
+/*ゲームステータス要素をここに保存します*/
 const statusDisplay = document.querySelector('.game--status');
 
-/*
-終了の場合、gameActiveを使用してゲームを一時停止します 
-*/
+
+/*終了の場合、gameActiveを使用してゲームを一時停止します */
 let gameActive = true;
-/*
-プレーヤーをここに保存するので、誰の番かわかります 
-*/
+/*プレーヤーをここに保存するので、誰の番かわかります */
 let currentPlayer = "X";
-/*
-ゲームの状態、つまり空の文字列の形式を配列に格納します
-*/
+/*ゲームの状態、つまり空の文字列の形式を配列に格納します*/
 let gameState = ["", "", "", "", "", "", "", "", ""];
-/*
-ゲーム中にユーザーに表示するいくつかのメッセージを宣言しました。
-*/
+
+
+/*ゲーム中にユーザーに表示するいくつかのメッセージを宣言しました。*/
 const winningMessage = () => `Player ${currentPlayer} has won!`;
 const drawMessage = () => `Game ended in a draw!`;
 const currentPlayerTurn = () => `It's ${currentPlayer}'s turn`;
-/*
-プレイヤーに誰の番かを知らせます 
-*/
+
+/*プレイヤーに誰の番かを知らせます */
 statusDisplay.innerHTML = currentPlayerTurn();
 
+
+/*内部のゲーム状態を更新し、UIを更新します*/ 
 function handleCellPlayed(clickedCell, clickedCellIndex) {
-    /*
-    ゲームの状態を動きに合わせて更新し、動きに合わせるようにUIを更新します
-    */
+    /*ゲームの状態を動きに合わせて更新し、動きに合わせるようにUIを更新します*/
         gameState[clickedCellIndex] = currentPlayer;
         clickedCell.innerHTML = currentPlayer;
 }
-    
+
+/*現在のプレーヤーを変更し、メッセージを更新します。 */  
 function handlePlayerChange() {
     currentPlayer = currentPlayer === "X" ? "O" : "X";
     statusDisplay.innerHTML = currentPlayerTurn();
